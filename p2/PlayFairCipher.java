@@ -1,5 +1,5 @@
 package lab.p2;
-class PlayFairCipher {
+public class PlayFairCipher {
 
     private char[][] keyTable;
     private static final char APPEND = 'X';
@@ -187,10 +187,12 @@ class PlayFairCipher {
         return postprocess(pt.toString());
     }
 
-}
-
-public class PlayFair {
     public static void main(String[] args) {
-       
+        
+        PlayFairCipher c = new PlayFairCipher("PANDA");
+        String ans = c.encode("HAPPYME");
+        System.out.println(ans);
+        System.out.println(c.decode(ans));
+        
     }
 }
